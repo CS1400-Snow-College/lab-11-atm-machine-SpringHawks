@@ -1,0 +1,101 @@
+ATM Machine Flowchart
+Start
+Then
+Load bank.txt : list of customers (include username, PIN, balance)
+Then
+Login prompt
+Then
+Ask for username and pin
+Then
+Check if they match the records
+If yes > and login is successful > go to the main menu
+If no > they get 3 tries to try again
+Then if there are 3 fails the program closes
+Then if they get to the main menu
+Methods for
+>1. Check Balance
+>2. Withdraw
+>3. Deposit
+>4. Display Last 5 transactions
+>5. Quick Withdraw $20
+>6. Quick Withdraw $40
+>7. Quick Withdraw $100
+>8. End session
+Then
+Update and save user data
+Then
+End program
+
+Methods Flow Chart
+
+LoadBankCustomers()
+Customer records. Each line is a customer.
+Start
+Then
+Open bank.txt
+Then
+For each line in the file
+> split the line at the commas
+>customer object
+>add to the list of customers,
+Then
+Return the customers as a list
+ValidateUser(username and pin string)
+Need to see if the username and pin match the customer list.
+Start
+Then
+Loop through the list of customers
+IF the username and pin match
+>return the customer object
+ELSE
+>keep looping
+Then
+Return Null if none match, or give something that says invalid
+CheckBalance
+Show the customer’s balance
+start
+Then
+Get the balance
+Then
+Display the balance
+DepositMoney
+Lets customer add money. Use double not int
+Start
+If amount is <= 0 show an error message
+Else
+>add amount to the balance
+> record the transaction
+Then
+Show or return the new balance.
+WithdrawMoney
+Take money out of bank account, show new balance
+Start
+If withdrawal amount <= 0 “Insufficient funds”
+If withdrawal amount > balance show “insufficient funds”
+Else
+>subtract with drawl amount
+>record the transaction
+Then show new balance
+QuickWithdraw
+Take out fast cash $20, $40, $100
+Start
+Use WithdrawMoney (customer, amount
+Then
+DisplayTransactions
+Show the last 5 transactions
+Start
+Get the transaction list from transaction.txt
+then
+Display dequeue the 5 most recent
+then
+SaveBankCustomers
+Save updated customer info to bank.txt
+Start
+Open bank.txt to write
+Then
+For each customer
+>convert to line
+>write line to file
+Then
+Close file
+then

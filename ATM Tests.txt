@@ -1,0 +1,35 @@
+1. Check balance
+-Input: Customer with $200 balance
+-Action: CheckBalance()
+-Expected Output: $200.00
+-Should Pass
+
+2. Valid Withdraw
+-Input: Withdraw $50 from $200 balance
+-Expected Output: $150.00
+-Should Pass
+
+3. Invalid Withdraw (overdraft)
+-Input: Withdraw $300 from $200 balance
+-Expected Output: Rejected with error message
+-Should Fail
+
+4. Valid Deposit
+-Input: Deposit $100 to $150 balance
+-Expected Output: $250.00
+-Should Pass
+
+5. Invalid Deposit (negative)
+-Input: Deposit -$20
+-Expected Output: Rejected with error message
+-Should Fail
+
+6. Quick Withdraw $40
+-Input: $250 balance
+-Expected Output: $210
+-Should Pass
+
+7. Quick Withdraw $100 with $50 balance
+-Input: $50 balance
+-Expected Output: Rejected
+-Should Fail
